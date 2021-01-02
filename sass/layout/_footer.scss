@@ -1,0 +1,21 @@
+footer {
+    background-color: $dark-gray-color;
+    color: $white-color;
+    padding: 10px 0 20px;
+    h3 {
+        padding-left: 3vw;
+    }
+    ul {
+        padding-left: 0;
+    }
+    li {
+        margin-top: 10px;
+        padding-left: 3vw;
+    }
+    a {
+        color: $white-color;
+        i {
+            margin-right: 10px;
+        }
+    }
+}
