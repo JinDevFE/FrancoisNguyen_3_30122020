@@ -1,0 +1,3 @@
+@mixin box-shadow-color ($color: darken($light-gray-color, 12%)) {
+    box-shadow: 3px 5px 10px $color;
+}

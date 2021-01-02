@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: O;
+    box-sizing: border-box;
+    width: 100%;
     font-family: $font-family-body;
 }
 
@@ -15,6 +17,10 @@ li {
 h1,
 h2,
 h3 {
+    margin: 0;
+}
+
+h1 {
     font-family: $font-familiy-title;
 }
 
