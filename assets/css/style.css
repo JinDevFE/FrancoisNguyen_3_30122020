@@ -48,16 +48,16 @@ h1 {
 footer {
   background-color: #373737;
   color: #FFFFFF;
-  padding: 10px 0 20px;
+  padding: 30px 0 35px;
 }
 footer h3 {
-  margin: 20px 0 30px 5vw;
+  margin: 0 0 25px 5vw;
 }
 footer ul {
   padding-left: 0;
 }
 footer li {
-  margin-top: 10px;
+  margin-top: 12px;
   margin-left: 5vw;
 }
 footer a {
@@ -81,14 +81,17 @@ footer a i {
 .presentation {
   background-color: #F6F6F6;
   text-align: center;
-  padding: 40px 50px 75px;
+  padding: 45px 50px 60px;
+}
+.presentation h2 {
+  margin-bottom: 20px;
 }
 .presentation p {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .operation {
-  padding: 40px 0 45px;
+  padding: 50px 0 45px;
   margin: 0 5vw;
 }
 .operation h2 {
@@ -104,13 +107,13 @@ footer a i {
 .choices {
   height: 75px;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   width: 90vw;
   cursor: pointer;
 }
 .choices_number {
   z-index: 2;
-  border-radius: 1rem;
+  border-radius: 50%;
   height: 20px;
   width: 20px;
   background-color: #9356DC;
@@ -145,22 +148,21 @@ footer a i {
 
 .restaurants {
   background-color: #F6F6F6;
-  padding: 60px 0;
+  padding: 55px 0 65px;
 }
 .restaurants h2 {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   margin-left: 5vw;
 }
 
 .restaurant-preview {
-  box-shadow: 3px 5px 10px #d7d7d7;
-  height: 300px;
+  height: 250px;
   margin: 0 5vw;
   margin-bottom: 20px;
 }
 .restaurant-preview_image {
   position: relative;
-  height: 220px;
+  height: 175px;
 }
 .restaurant-preview_image img {
   width: 90vw;
@@ -174,15 +176,15 @@ footer a i {
   right: 15px;
   border-radius: 3px;
   background-color: #99E2D0;
-  color: #217460;
-  font-size: 1.2rem;
+  color: #278870;
+  font-size: 0.8rem;
   font-weight: bold;
   padding: 6px 12px;
 }
 .restaurant-preview_description {
   align-items: center;
   border-radius: 0 0 20px 20px;
-  height: 80px;
+  height: 75px;
   background-color: #FFFFFF;
 }
 .restaurant-preview_description .description-content {
