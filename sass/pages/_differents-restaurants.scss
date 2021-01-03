@@ -12,6 +12,7 @@
     height: 250px;
     margin: $margin-left-right;
     margin-bottom: 20px;
+    @include box-shadow-color;
 
     &_image {
         position: relative;

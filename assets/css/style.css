@@ -54,10 +54,10 @@ h1 {
 .dishes {
   display: flex;
   justify-content: space-between;
+  position: relative;
   border-radius: 16px;
   background-color: #FFFFFF;
   margin-top: 15px;
-  overflow: hidden;
   box-shadow: 3px 5px 10px #d7d7d7;
 }
 .dishes_text {
@@ -66,14 +66,14 @@ h1 {
   padding: 12px 0 12px 12px;
 }
 .dishes_name {
-  font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 .dishes p {
   margin: 0;
+  white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 0.9rem;
+  margin-bottom: 5px;
 }
 .dishes_price {
   position: absolute;
@@ -81,6 +81,10 @@ h1 {
   bottom: 15px;
   align-self: flex-end;
   font-weight: bold;
+}
+
+.animation i {
+  display: none;
 }
 
 .header-homepage {
@@ -224,6 +228,7 @@ footer a i {
   height: 250px;
   margin: 0 5vw;
   margin-bottom: 20px;
+  box-shadow: 3px 5px 10px #d7d7d7;
 }
 .restaurant-preview_image {
   position: relative;
