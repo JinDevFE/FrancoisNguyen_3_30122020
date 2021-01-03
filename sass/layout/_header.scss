@@ -1,8 +1,29 @@
 .header-homepage {
     height: 60px;
+
     img {
         width: 160px;
         margin: auto;
     }
 }
 
+.header-pages {
+    height: 60px;
+    align-items: center;
+    padding-right: 50px;
+
+    a {
+        color: $dark-gray-color;
+        width: 50px;
+    }
+
+        i {
+            font-size: 1.2rem;
+            margin: auto;
+        }
+
+    h1 {
+        flex: auto;
+        text-align: center;
+    }
+}

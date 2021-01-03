@@ -1,0 +1,64 @@
+main {
+    background-color: $light-gray-color;
+}
+
+.resto-picture {
+    height: 255px;
+
+    &.picture-lpdg {
+        @include background-restaurant-image(resto-la-palette-du-gout);
+    }
+
+    &.picture-lne {
+        @include background-restaurant-image(resto-la-note-enchantee);
+    }
+
+    &.picture-alf {
+        @include background-restaurant-image(resto-a-la-francaise);
+    }
+
+    &.picture-ldds {
+        @include background-restaurant-image(resto-le-delice-des-sens);
+    }
+}
+
+.resto {
+    border-radius: 20px 20px 0 0;
+    margin: $margin-left-right;
+    padding: 40px 0 60px;
+
+    &_name {
+        justify-content: space-between;
+        align-items: baseline;
+        margin-right: 20px;
+
+        h2 {
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 1.7rem;
+        }
+
+        i {
+            font-size: 1.4rem;
+        }
+    }
+
+    h3 {
+        text-transform: uppercase;
+        padding: 45px 0 0 5px; 
+        font-weight: lighter;
+    
+        &::after {
+            display: block;
+            content: "";
+            height: 3px;
+            width: 40px;
+            background-color: $tertiary-color;
+            margin-top: 10px;
+        }
+    }
+}
+
+
+
+
+

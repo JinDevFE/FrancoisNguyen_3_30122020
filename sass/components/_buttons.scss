@@ -1,6 +1,20 @@
 .btn {
     border-radius: 25px;
-    padding: 15px 25px;
+    cursor: pointer;
+    border: none;
     background: linear-gradient(175deg, $secondary-color, $primary-color);
-    color: $white-color;
+    padding: 15px 25px;
+    color: $white-color;    
+    @include box-shadow-color;
+}
+
+.btn-restaurant {
+    width: 220px;
+    margin: 0 auto;
+}
+
+.btn-order {
+    display: block;
+    width: 185px;
+    margin: 45px auto 0;
 }

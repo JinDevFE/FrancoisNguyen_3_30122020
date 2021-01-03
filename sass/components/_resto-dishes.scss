@@ -1,0 +1,36 @@
+.dishes {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 16px;
+    background-color: $white-color;
+    margin-top: 15px;
+    overflow: hidden;
+    @include box-shadow-color;
+
+    &_text {
+        justify-content: space-between;
+        width: 80%;
+        padding: 12px 0 12px 12px;
+    }
+
+        &_name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0;
+            text-overflow: ellipsis;
+            font-size: 0.9rem;
+        }
+
+    &_price {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        align-self: flex-end;
+        font-weight: bold;
+    }
+
+}

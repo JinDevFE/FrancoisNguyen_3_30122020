@@ -1,3 +1,9 @@
 @mixin box-shadow-color ($color: darken($light-gray-color, 12%)) {
     box-shadow: 3px 5px 10px $color;
 }
+
+@mixin background-restaurant-image($resto) {
+    background: url('../images/restaurants/#{map-get($restaurant-image, $resto)}');
+    background-size: cover;
+    background-position: center;
+}
