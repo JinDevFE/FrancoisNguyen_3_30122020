@@ -9,6 +9,7 @@
 }
 
 .restaurant-preview {
+    box-sizing: inherit;
     height: 250px;
     margin: $margin-left-right;
     margin-bottom: 20px;
@@ -23,6 +24,7 @@
             object-fit: cover;
             border-radius: 20px 20px 0 0;
         }
+        
         .new {
             position: absolute;
             top: 15px;

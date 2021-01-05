@@ -65,10 +65,10 @@ h1 {
   width: 80%;
   padding: 12px 0 12px 12px;
 }
-.dishes_name {
+.dishes_text .dishes_name {
   font-weight: bold;
 }
-.dishes p {
+.dishes_text p {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -133,6 +133,8 @@ footer a {
   color: #FFFFFF;
 }
 footer a i {
+  width: 20px;
+  text-align: center;
   margin-right: 10px;
 }
 
@@ -225,6 +227,7 @@ footer a i {
 }
 
 .restaurant-preview {
+  box-sizing: inherit;
   height: 250px;
   margin: 0 5vw;
   margin-bottom: 20px;
@@ -286,7 +289,7 @@ main {
 }
 
 .resto-picture {
-  height: 255px;
+  height: 270px;
 }
 .resto-picture.picture-lpdg {
   background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -310,9 +313,11 @@ main {
 }
 
 .resto {
-  border-radius: 20px 20px 0 0;
-  margin: 0 5vw;
-  padding: 40px 0 60px;
+  position: relative;
+  top: -40px;
+  border-radius: 40px 40px 0 0;
+  background-color: #F6F6F6;
+  padding: 40px 5vw 20px;
 }
 .resto_name {
   justify-content: space-between;
