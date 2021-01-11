@@ -1,3 +1,7 @@
+.loading-spinner {
+    display: none;
+}
+
 .header-homepage {
     height: 60px;
 
@@ -27,3 +31,48 @@
         text-align: center;
     }
 }
+
+/* animation for the loading spinner */
+.page-loading {
+    display: flex;
+    position: fixed;
+    transform: scale(0);
+    background-color: rgba($light-gray-color, 0.75);
+    animation: loading-background 3000ms 50ms backwards;
+
+    .waiting{
+        transform: scale(0);
+        font-size: 20rem;
+        color: $primary-color;        
+        margin: auto;
+        animation: loading-spinner 3000ms 50ms linear backwards;
+    }
+}
+
+@keyframes loading-background{
+    from,to {
+        transform: scale(1);
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@keyframes loading-spinner{
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        opacity: .75;
+    }
+    50% {
+        opacity: .50;
+    }
+    75% {
+        opacity: .25;
+    }
+    to {
+        transform: rotate(1turn);
+        opacity: 0;
+    }
+}
+

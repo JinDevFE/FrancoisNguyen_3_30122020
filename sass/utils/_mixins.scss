@@ -1,4 +1,4 @@
-@mixin box-shadow-color ($color: darken($light-gray-color, 12%)) {
+@mixin box-shadow-color ($color: darken($light-gray-color, 20%)) {
     box-shadow: 3px 5px 10px $color;
 }
 
@@ -6,4 +6,8 @@
     background: url('../images/restaurants/#{map-get($restaurant-image, $restaurant)}');
     background-size: cover;
     background-position: center;
+}
+
+@mixin check-mark($add-a-dish) {
+    transition: $add-a-dish 500ms 100ms linear;
 }

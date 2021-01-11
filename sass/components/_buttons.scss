@@ -6,6 +6,11 @@
     padding: 15px 25px;
     color: $white-color;    
     @include box-shadow-color;
+
+    &:hover {
+        background: linear-gradient(175deg, $secondary-color, lighten($primary-color, 10%));
+        @include box-shadow-color(darken($light-gray-color,30%));
+    }
 }
 
 .btn-restaurant {
@@ -18,3 +23,23 @@
     width: 185px;
     margin: 45px auto 0;
 }
+
+.restaurant-heart {
+    justify-content: center;
+    width: 25%;
+    font-size: 2rem;
+    color: lighten($black-color, 30%);
+    
+    .empty {
+        cursor: pointer;
+        position: relative;
+
+    }
+    .full {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+
