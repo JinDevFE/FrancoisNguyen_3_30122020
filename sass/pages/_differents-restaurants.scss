@@ -64,6 +64,25 @@
     }
 }
 
+.restaurant-heart {
+
+    .empty {
+        cursor: pointer;
+        position: relative;
+
+        
+        &:hover > .full {
+
+        }
+
+    }
+    .full {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
 @media only screen and (min-width: 600px) {
     .container-restaurant {
         display: flex;

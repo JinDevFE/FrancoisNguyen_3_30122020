@@ -67,8 +67,9 @@ h1 {
 }
 .restaurant-heart .full {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10;
+  right: 0;
+  display: none;
 }
 
 .dishes {
@@ -447,6 +448,16 @@ footer a i {
 }
 .restaurant-preview_description .description-name + p {
   margin: 0;
+}
+
+.restaurant-heart .empty {
+  cursor: pointer;
+  position: relative;
+}
+.restaurant-heart .full {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media only screen and (min-width: 600px) {

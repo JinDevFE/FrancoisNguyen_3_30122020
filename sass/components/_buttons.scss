@@ -29,17 +29,21 @@
     width: 25%;
     font-size: 2rem;
     color: lighten($black-color, 30%);
-    
+
     .empty {
         cursor: pointer;
         position: relative;
-
     }
+    
     .full {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 10;
+        right: 0;
+        display: none;
     }
 }
+
+
+
 
 
