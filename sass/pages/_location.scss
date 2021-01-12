@@ -1,6 +1,8 @@
 .location {
     height: 50px;
     background-color: $silver-gray-color;
+    /* inset | offset-x | offset-y | blur-radius | spread-radius |color */
+    box-shadow: inset 0 5px 3px -2px darken($silver-gray-color, 20%);
     i {
         margin-right: 15px;
     }

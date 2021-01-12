@@ -9,7 +9,6 @@
 }
 
 .restaurant-preview {
-    box-sizing: inherit;
     height: 250px;
     margin: $margin-left-right;
     margin-bottom: 20px;
@@ -62,6 +61,54 @@
                     margin: 0;
                 }
             }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container-restaurant {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: $margin-left-right;
+
+        img {
+            width: 42.5vw;
+        }
+    }   
+
+    .restaurants {
+
+        h2 {
+            text-align: center;
+            margin: 0 5vw 50px;
+
+            &::before {
+                display: inline-block;
+                vertical-align: middle;
+                content: "";
+                height: 3px;
+                width: 100px;
+                background: linear-gradient(175deg, $secondary-color, $primary-color);
+                margin-right: 50px;
+            }
+
+            &::after {
+                display: inline-block;
+                vertical-align: middle;
+                content: "";
+                height: 3px;
+                width: 100px;
+                background: linear-gradient(175deg, $secondary-color, $primary-color);
+                margin-left: 50px;
+            }
+        }
+    }
+
+    .restaurant-preview {
+        margin: 0;
+        margin-bottom: 40px;
+
     }
 }
 

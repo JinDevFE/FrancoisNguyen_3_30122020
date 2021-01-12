@@ -9,5 +9,5 @@
 }
 
 @mixin check-mark($add-a-dish) {
-    transition: $add-a-dish 500ms 100ms linear;
+    transition: $add-a-dish 200ms 50ms linear;
 }
