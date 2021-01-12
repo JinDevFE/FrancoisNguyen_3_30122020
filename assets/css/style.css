@@ -450,9 +450,16 @@ footer a i {
   margin: 0;
 }
 
+.restaurant-heart {
+  position: relative;
+}
+.restaurant-heart:hover .full {
+  color: blue;
+  z-index: 1000;
+}
 .restaurant-heart .empty {
   cursor: pointer;
-  position: relative;
+  transition: all 500ms 100ms ease;
 }
 .restaurant-heart .full {
   position: absolute;
