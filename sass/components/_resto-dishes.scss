@@ -54,11 +54,11 @@
         }
     }
 
-    &:active {
+    &:hover {
         cursor: pointer;
     }
 
-    &:active .dishes_text{
+    &:hover .dishes_text{
         width: 60%;
         .dishes_name, p {
             overflow: hidden;
@@ -67,58 +67,47 @@
         }
     }
 
-    &:active .animation{
+    &:hover .animation{
         transform: scaleX(1);
     }
 
-    &:active .animation_icon{
+    &:hover .animation_icon{
         transform: rotate(360deg);
     }
 
     /* negative sign (-) are required here for moving the price on the left side */
-    &:active .dishes_price{
+    &:hover .dishes_price{
         transform: translateX(-$check-mark-width);
     }
 }
 
 /* animation for the delay of appearance of dishes */
-.sub-menu {
-    animation-duration: 10000ms;
+.container-menu {
     animation-name: dishes-loading;
+    animation-duration: 10000ms;
+    animation-delay: 0s;
 }
   
 @keyframes dishes-loading {
     from {
+        transform: translateY(1000px);
         opacity: 0;
     }
-    10% {
-        opacity: 0.1;
-    }
-    20% {
-        opacity: 0.2;
-    }
-    30% {
-        opacity: 0.3;
-    }
-    40% {
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    60% {
-        opacity: 0.6;
-    }
-    70% {
-        opacity: 0.7;
-    }
-    80% {
-        opacity: 0.8;
-    }
-    90% {
-        opacity: 0.9;
-    }
     to {
+        transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    @keyframes dishes-loading {
+        from {
+            transform: translateX(1000px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
 }

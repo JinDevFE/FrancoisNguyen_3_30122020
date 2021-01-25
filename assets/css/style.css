@@ -123,66 +123,54 @@ h1 {
   transform: rotate(0deg);
   transition: transform 200ms 50ms linear;
 }
-.dishes:active {
+.dishes:hover {
   cursor: pointer;
 }
-.dishes:active .dishes_text {
+.dishes:hover .dishes_text {
   width: 60%;
 }
-.dishes:active .dishes_text .dishes_name, .dishes:active .dishes_text p {
+.dishes:hover .dishes_text .dishes_name, .dishes:hover .dishes_text p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.dishes:active .animation {
+.dishes:hover .animation {
   transform: scaleX(1);
 }
-.dishes:active .animation_icon {
+.dishes:hover .animation_icon {
   transform: rotate(360deg);
 }
-.dishes:active .dishes_price {
+.dishes:hover .dishes_price {
   transform: translateX(-75px);
 }
 
 /* animation for the delay of appearance of dishes */
-.sub-menu {
-  animation-duration: 10000ms;
+.container-menu {
   animation-name: dishes-loading;
+  animation-duration: 10000ms;
+  animation-delay: 0s;
 }
 
 @keyframes dishes-loading {
   from {
+    transform: translateY(1000px);
     opacity: 0;
   }
-  10% {
-    opacity: 0.1;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  30% {
-    opacity: 0.3;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  70% {
-    opacity: 0.7;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  90% {
-    opacity: 0.9;
-  }
   to {
+    transform: translateY(0);
     opacity: 1;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  @keyframes dishes-loading {
+    from {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }
 .loading-spinner {
@@ -392,7 +380,7 @@ footer a i {
 }
 .restaurants {
   background-color: #F6F6F6;
-  padding: 55px 0 65px;
+  padding: 55px 5vw 45px;
 }
 .restaurants h2 {
   margin-bottom: 25px;
@@ -401,9 +389,7 @@ footer a i {
 
 .restaurant-preview {
   height: 250px;
-  margin: 0 5vw;
   margin-bottom: 20px;
-  box-shadow: 3px 5px 10px #c3c3c3;
 }
 .restaurant-preview_image {
   position: relative;
@@ -414,6 +400,7 @@ footer a i {
   height: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
+  box-shadow: 3px 5px 10px #c3c3c3;
 }
 .restaurant-preview_image .new {
   position: absolute;
@@ -431,6 +418,7 @@ footer a i {
   border-radius: 0 0 20px 20px;
   height: 75px;
   background-color: #FFFFFF;
+  box-shadow: 3px 5px 10px #c3c3c3;
 }
 .restaurant-preview_description .description-content {
   flex: 1;
@@ -450,23 +438,74 @@ footer a i {
   margin: 0;
 }
 
+/* heart management */
 .restaurant-heart {
   position: relative;
-}
-.restaurant-heart:hover .full {
-  color: blue;
-  z-index: 1000;
+  justify-content: center;
+  align-items: center;
 }
 .restaurant-heart .empty {
-  cursor: pointer;
-  transition: all 500ms 100ms ease;
+  color: #373737;
+  /* + into the place of ~ works as well */
+}
+.restaurant-heart .empty:active {
+  display: none;
+}
+.restaurant-heart .empty:active ~ .full {
+  display: contents;
+  color: #FF79DA;
 }
 .restaurant-heart .full {
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
+.resto_name {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.resto_name .empty {
+  color: #373737;
+  font-size: 2rem;
+  /* + into the place of ~ works as well */
+}
+.resto_name .empty:active {
+  display: none;
+}
+.resto_name .empty:active ~ .full {
+  display: contents;
+  color: #FF79DA;
+}
+.resto_name .full {
+  position: absolute;
+  display: none;
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .restaurant-heart .empty {
+    /* + into the place of ~ works as well */
+  }
+  .restaurant-heart .empty:hover {
+    display: none;
+  }
+  .restaurant-heart .empty:hover ~ .full {
+    display: contents;
+    color: #FF79DA;
+  }
+
+  .resto_name .empty {
+    /* + into the place of ~ works as well */
+  }
+  .resto_name .empty:hover {
+    display: none;
+  }
+  .resto_name .empty:hover ~ .full {
+    display: contents;
+    color: #FF79DA;
+  }
+}
+/* index/.container-restaurant flexbox management */
 @media only screen and (min-width: 600px) {
   .container-restaurant {
     display: flex;
@@ -479,6 +518,9 @@ footer a i {
     width: 42.5vw;
   }
 
+  .restaurants {
+    padding: 55px 0 45px;
+  }
   .restaurants h2 {
     text-align: center;
     margin: 0 5vw 50px;

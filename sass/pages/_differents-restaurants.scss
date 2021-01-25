@@ -1,6 +1,6 @@
 .restaurants {
     background-color: $light-gray-color;
-    padding: 55px 0 65px;
+    padding: 55px 5vw 45px;
 
     h2 {
         margin-bottom: 25px;
@@ -10,11 +10,7 @@
 
 .restaurant-preview {
     height: 250px;
-    margin: $margin-left-right;
     margin-bottom: 20px;
-    @include box-shadow-color;
-
-
 
     &_image {
         position: relative;
@@ -24,6 +20,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 20px 20px 0 0;
+            @include box-shadow-color;
         }
         
         .new {
@@ -44,6 +41,7 @@
         border-radius: 0 0 20px 20px;
         height: 75px;
         background-color: $white-color;
+        @include box-shadow-color;
 
         .description-content {
             flex: 1;
@@ -66,26 +64,95 @@
     }
 }
 
+/* heart management */
 .restaurant-heart {
     position: relative;
+    justify-content: center;
+    align-items: center;
 
-    &:hover {
-        .full {
-            color: blue;
-            z-index: 1000;
+    .empty {
+        color: $dark-gray-color;
+
+        &:active {
+            display: none;
+        }
+    
+        /* + into the place of ~ works as well */
+        &:active ~ .full {
+            display: contents;
+            color: $secondary-color;
         }
     }
-    .empty {
-        cursor: pointer;
-        transition: all 500ms 100ms ease;
-    }   
+
     .full {
         position: absolute;
-        top: 0;
-        left: 0;
     }
 }
 
+.resto_name {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    .empty {
+        color: $dark-gray-color;
+        font-size: 2rem;
+        
+        &:active {
+            display: none;
+        }
+    
+        /* + into the place of ~ works as well */
+        &:active ~ .full {
+            display: contents;
+            color: $secondary-color;
+        }
+    }
+
+    .full {
+        position: absolute;
+        display: none;
+        font-size: 2rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    .restaurant-heart {
+    
+        .empty {
+    
+            &:hover {
+                display: none;
+            }
+        
+            /* + into the place of ~ works as well */
+            &:hover ~ .full {
+                display: contents;
+                color: $secondary-color;
+            }
+        }
+    }
+    
+    .resto_name {
+    
+        .empty {
+            
+            &:hover {
+                display: none;
+            }
+        
+            /* + into the place of ~ works as well */
+            &:hover ~ .full {
+                display: contents;
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+/* index/.container-restaurant flexbox management */
 @media only screen and (min-width: 600px) {
     .container-restaurant {
         display: flex;
@@ -100,6 +167,7 @@
     }   
 
     .restaurants {
+        padding: 55px 0 45px;
 
         h2 {
             text-align: center;
@@ -130,7 +198,6 @@
     .restaurant-preview {
         margin: 0;
         margin-bottom: 40px;
-
     }
 }
 
