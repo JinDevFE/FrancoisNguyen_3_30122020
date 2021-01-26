@@ -213,13 +213,47 @@ h1 {
 }
 
 /* animation for the delay of appearance of dishes */
-.container-menu {
-  animation-name: dishes-loading;
-  animation-duration: 10000ms;
+.starter {
+  animation-name: starter-loading;
+  animation-duration: 5000ms;
   animation-delay: 0s;
 }
 
-@keyframes dishes-loading {
+.main-dish {
+  animation-name: main-dish-loading;
+  animation-duration: 5000ms;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.dessert {
+  animation-name: dessert-loading;
+  animation-duration: 5000ms;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+@keyframes starter-loading {
+  from {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes main-dish-loading {
+  from {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes dessert-loading {
   from {
     transform: translateY(1000px);
     opacity: 0;
@@ -230,7 +264,27 @@ h1 {
   }
 }
 @media only screen and (min-width: 1024px) {
-  @keyframes dishes-loading {
+  @keyframes starter-loading {
+    from {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes main-dish-loading {
+    from {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes dessert-loading {
     from {
       transform: translateX(1000px);
       opacity: 0;
