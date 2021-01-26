@@ -71,11 +71,12 @@ h1 {
   display: none;
 }
 .restaurant-heart .empty:active ~ .full {
-  display: contents;
-  color: #FF79DA;
+  display: block;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurant-heart .full {
-  position: absolute;
   display: none;
 }
 
@@ -93,11 +94,12 @@ h1 {
   display: none;
 }
 .resto_name .empty:active ~ .full {
-  display: contents;
-  color: #FF79DA;
+  display: block;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .resto_name .full {
-  position: absolute;
   display: none;
   font-size: 2rem;
 }
@@ -119,8 +121,10 @@ h1 {
     display: none;
   }
   .restaurant-heart .empty:hover ~ .full {
-    display: contents;
-    color: #FF79DA;
+    display: block;
+    background: linear-gradient(175deg, #FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .resto_name {
@@ -136,8 +140,10 @@ h1 {
     display: none;
   }
   .resto_name .empty:hover ~ .full {
-    display: contents;
-    color: #FF79DA;
+    display: block;
+    background: linear-gradient(175deg, #FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 .dishes {
@@ -213,12 +219,6 @@ h1 {
 }
 
 /* animation for the delay of appearance of dishes */
-.container-menu {
-  animation-name: dish-loading;
-  animation-duration: 5000ms;
-  animation-delay: 0s;
-}
-
 .starter {
   animation-name: dish-loading;
   animation-duration: 5000ms;
@@ -227,35 +227,35 @@ h1 {
 
 .main-dish {
   animation-name: dish-loading;
-  animation-duration: 5000ms;
-  animation-delay: 1s;
+  animation-duration: 10000ms;
+  animation-delay: 0s;
 }
 
 .dessert {
   animation-name: dish-loading;
-  animation-duration: 5000ms;
-  animation-delay: 2s;
+  animation-duration: 15000ms;
+  animation-delay: 0s;
 }
 
 @keyframes dish-loading {
-  from {
-    transform: translateY(1000px);
-    opacity: 0;
-  }
-  to {
+  0%, 100% {
     transform: translateY(0);
     opacity: 1;
+  }
+  0%, 30% {
+    transform: translateY(1000px);
+    opacity: 0;
   }
 }
 @media only screen and (min-width: 1024px) {
   @keyframes dish-loading {
-    from {
+    0%, 100% {
+      transform: translateX();
+      opacity: 1;
+    }
+    0%, 30% {
       transform: translateX(1000px);
       opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
     }
   }
 }
@@ -296,6 +296,7 @@ h1 {
   transform: scale(0);
   background-color: rgba(246, 246, 246, 0.75);
   animation: loading-background 3000ms 50ms backwards;
+  z-index: 1000;
 }
 .page-loading .waiting {
   transform: scale(0);

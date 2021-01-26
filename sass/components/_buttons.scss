@@ -41,13 +41,14 @@
     
         /* + into the place of ~ works as well */
         &:active ~ .full {
-            display: contents;
-            color: $secondary-color;
+            display: block;
+            background: linear-gradient(175deg, $secondary-color, $primary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
     
     .full {
-        position: absolute;
         display: none;
     }
 }
@@ -67,13 +68,14 @@
     
         /* + into the place of ~ works as well */
         &:active ~ .full {
-            display: contents;
-            color: $secondary-color;
+            display: block;
+            background: linear-gradient(175deg, $secondary-color, $primary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 
     .full {
-        position: absolute;
         display: none;
         font-size: 2rem;
     }
@@ -97,8 +99,10 @@
         
             /* + into the place of ~ works as well */
             &:hover ~ .full {
-                display: contents;
-                color: $secondary-color;
+                display: block;
+                background: linear-gradient(175deg, $secondary-color, $primary-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }
@@ -117,8 +121,10 @@
         
             /* + into the place of ~ works as well */
             &:hover ~ .full {
-                display: contents;
-                color: $secondary-color;
+                display: block;
+                background: linear-gradient(175deg, $secondary-color, $primary-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }

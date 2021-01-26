@@ -39,6 +39,7 @@
     transform: scale(0);
     background-color: rgba($light-gray-color, 0.75);
     animation: loading-background 3000ms 50ms backwards;
+    z-index: 1000;
 
     .waiting{
         transform: scale(0);
