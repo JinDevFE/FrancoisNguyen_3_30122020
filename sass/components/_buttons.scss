@@ -24,26 +24,105 @@
     margin: 45px auto 0;
 }
 
+/* heart management for index*/
 .restaurant-heart {
+    position: relative;
     justify-content: center;
     width: 25%;
     font-size: 2rem;
-    color: lighten($black-color, 30%);
 
-    .empty {
+    .empty {        
         cursor: pointer;
-        position: relative;
+        color: lighten($black-color, 30%);
+
+        &:active {
+            display: none;
+        }
+    
+        /* + into the place of ~ works as well */
+        &:active ~ .full {
+            display: contents;
+            color: $secondary-color;
+        }
     }
     
     .full {
         position: absolute;
-        top: 10;
-        right: 0;
         display: none;
     }
 }
 
+/* heart management for the 4 restaurants */
+.resto_name {
+    position: relative;
+    justify-content: center;
 
+    .empty {
+        color: lighten($black-color, 30%);
+        font-size: 2rem;
+        
+        &:active {
+            display: none;
+        }
+    
+        /* + into the place of ~ works as well */
+        &:active ~ .full {
+            display: contents;
+            color: $secondary-color;
+        }
+    }
+
+    .full {
+        position: absolute;
+        display: none;
+        font-size: 2rem;
+    }
+}
+
+/* @media for heart buttons */
+@media only screen and (min-width: 1024px) {
+    .restaurant-heart {
+        justify-content: center;
+        width: 25%;
+        font-size: 2rem;
+
+        .empty {
+            position: relative;
+            cursor: pointer;
+            color: lighten($black-color, 30%);
+
+            &:hover {
+                display: none;
+            }
+        
+            /* + into the place of ~ works as well */
+            &:hover ~ .full {
+                display: contents;
+                color: $secondary-color;
+            }
+        }
+    }
+    
+    .resto_name {
+        position: relative;
+        justify-content: center;
+
+        .empty {
+            color: lighten($black-color, 30%);
+            font-size: 2rem;
+
+            &:hover {
+                display: none;
+            }
+        
+            /* + into the place of ~ works as well */
+            &:hover ~ .full {
+                display: contents;
+                color: $secondary-color;
+            }
+        }
+    }
+}
 
 
 

@@ -55,23 +55,91 @@ h1 {
   margin: 45px auto 0;
 }
 
+/* heart management for index*/
 .restaurant-heart {
+  position: relative;
   justify-content: center;
   width: 25%;
   font-size: 2rem;
-  color: #4d4d4d;
 }
 .restaurant-heart .empty {
   cursor: pointer;
-  position: relative;
+  color: #4d4d4d;
+  /* + into the place of ~ works as well */
+}
+.restaurant-heart .empty:active {
+  display: none;
+}
+.restaurant-heart .empty:active ~ .full {
+  display: contents;
+  color: #FF79DA;
 }
 .restaurant-heart .full {
   position: absolute;
-  top: 10;
-  right: 0;
   display: none;
 }
 
+/* heart management for the 4 restaurants */
+.resto_name {
+  position: relative;
+  justify-content: center;
+}
+.resto_name .empty {
+  color: #4d4d4d;
+  font-size: 2rem;
+  /* + into the place of ~ works as well */
+}
+.resto_name .empty:active {
+  display: none;
+}
+.resto_name .empty:active ~ .full {
+  display: contents;
+  color: #FF79DA;
+}
+.resto_name .full {
+  position: absolute;
+  display: none;
+  font-size: 2rem;
+}
+
+/* @media for heart buttons */
+@media only screen and (min-width: 1024px) {
+  .restaurant-heart {
+    justify-content: center;
+    width: 25%;
+    font-size: 2rem;
+  }
+  .restaurant-heart .empty {
+    position: relative;
+    cursor: pointer;
+    color: #4d4d4d;
+    /* + into the place of ~ works as well */
+  }
+  .restaurant-heart .empty:hover {
+    display: none;
+  }
+  .restaurant-heart .empty:hover ~ .full {
+    display: contents;
+    color: #FF79DA;
+  }
+
+  .resto_name {
+    position: relative;
+    justify-content: center;
+  }
+  .resto_name .empty {
+    color: #4d4d4d;
+    font-size: 2rem;
+    /* + into the place of ~ works as well */
+  }
+  .resto_name .empty:hover {
+    display: none;
+  }
+  .resto_name .empty:hover ~ .full {
+    display: contents;
+    color: #FF79DA;
+  }
+}
 .dishes {
   display: flex;
   justify-content: space-between;
@@ -438,73 +506,6 @@ footer a i {
   margin: 0;
 }
 
-/* heart management */
-.restaurant-heart {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-.restaurant-heart .empty {
-  color: #373737;
-  /* + into the place of ~ works as well */
-}
-.restaurant-heart .empty:active {
-  display: none;
-}
-.restaurant-heart .empty:active ~ .full {
-  display: contents;
-  color: #FF79DA;
-}
-.restaurant-heart .full {
-  position: absolute;
-}
-
-.resto_name {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-}
-.resto_name .empty {
-  color: #373737;
-  font-size: 2rem;
-  /* + into the place of ~ works as well */
-}
-.resto_name .empty:active {
-  display: none;
-}
-.resto_name .empty:active ~ .full {
-  display: contents;
-  color: #FF79DA;
-}
-.resto_name .full {
-  position: absolute;
-  display: none;
-  font-size: 2rem;
-}
-
-@media only screen and (min-width: 1024px) {
-  .restaurant-heart .empty {
-    /* + into the place of ~ works as well */
-  }
-  .restaurant-heart .empty:hover {
-    display: none;
-  }
-  .restaurant-heart .empty:hover ~ .full {
-    display: contents;
-    color: #FF79DA;
-  }
-
-  .resto_name .empty {
-    /* + into the place of ~ works as well */
-  }
-  .resto_name .empty:hover {
-    display: none;
-  }
-  .resto_name .empty:hover ~ .full {
-    display: contents;
-    color: #FF79DA;
-  }
-}
 /* index/.container-restaurant flexbox management */
 @media only screen and (min-width: 600px) {
   .container-restaurant {
