@@ -65,7 +65,6 @@ h1 {
 .restaurant-heart .empty {
   cursor: pointer;
   color: #4d4d4d;
-  /* + into the place of ~ works as well */
 }
 .restaurant-heart .empty:active {
   display: none;
@@ -88,7 +87,6 @@ h1 {
 .resto_name .empty {
   color: #4d4d4d;
   font-size: 2rem;
-  /* + into the place of ~ works as well */
 }
 .resto_name .empty:active {
   display: none;
@@ -115,7 +113,6 @@ h1 {
     position: relative;
     cursor: pointer;
     color: #4d4d4d;
-    /* + into the place of ~ works as well */
   }
   .restaurant-heart .empty:hover {
     display: none;
@@ -134,7 +131,6 @@ h1 {
   .resto_name .empty {
     color: #4d4d4d;
     font-size: 2rem;
-    /* + into the place of ~ works as well */
   }
   .resto_name .empty:hover {
     display: none;
@@ -222,19 +218,16 @@ h1 {
 .starter {
   animation-name: dish-loading;
   animation-duration: 5000ms;
-  animation-delay: 0s;
 }
 
 .main-dish {
   animation-name: dish-loading;
   animation-duration: 10000ms;
-  animation-delay: 0s;
 }
 
 .dessert {
   animation-name: dish-loading;
   animation-duration: 15000ms;
-  animation-delay: 0s;
 }
 
 @keyframes dish-loading {

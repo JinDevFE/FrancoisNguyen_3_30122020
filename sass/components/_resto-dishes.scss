@@ -85,19 +85,16 @@
 .starter {
     animation-name: dish-loading;
     animation-duration: 5000ms;
-    animation-delay: 0s;
 }
 
 .main-dish {
     animation-name: dish-loading;
     animation-duration: 10000ms;
-    animation-delay: 0s;
 }
 
 .dessert {
     animation-name: dish-loading;
     animation-duration: 15000ms;
-    animation-delay: 0s;
 }
   
 @keyframes dish-loading {
